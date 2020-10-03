@@ -11,7 +11,7 @@ public class FinishLine1 : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
             SceneManager.UnloadSceneAsync("Stage 1");
             SceneManager.LoadScene("Stage 2");
         }
