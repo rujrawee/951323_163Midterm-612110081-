@@ -18,10 +18,10 @@ public class MainMenuTimer : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
-        }
-        if (Input.anyKey)
-        {
-            timeRemaining = 5;
+            if (Input.anyKey)
+            {
+                timeRemaining = 5;
+            }
         }
         else
         {

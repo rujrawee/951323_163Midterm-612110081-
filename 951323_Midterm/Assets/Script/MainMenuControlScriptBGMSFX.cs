@@ -18,8 +18,8 @@ public class MainMenuControlScriptBGMSFX : MonoBehaviour//, IPointerEnterHandler
     // Use this for initialization
     void Start()
     {
-        /*this.audiosourceButtonUI = this.gameObject.AddComponent<AudioSource>();
-        this.audiosourceButtonUI.outputAudioMixerGroup = SingletonSoundManager.Instance.Mixer.FindMatchingGroups("UI")[0];*/
+        this.audiosourceButtonUI = this.gameObject.AddComponent<AudioSource>();
+        this.audiosourceButtonUI.outputAudioMixerGroup = SingletonSoundManager.Instance.Mixer.FindMatchingGroups("UI")[0];
         
         buttonStageSel.onClick.AddListener(delegate { StageSelButtonClick(buttonStageSel); });
         buttonOptions.onClick.AddListener(delegate { OptionsButtonClick(buttonOptions); });
@@ -30,13 +30,13 @@ public class MainMenuControlScriptBGMSFX : MonoBehaviour//, IPointerEnterHandler
             SingletonSoundManager.Instance.BGMSource.Play();
     }
 
-    /*public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerEnter(PointerEventData eventData)
     {
         if (audiosourceButtonUI.isPlaying)
-        audiosourceButtonUI.Stop();
+            audiosourceButtonUI.Stop();
         
         audiosourceButtonUI.PlayOneShot(audioclipHoldOver);
-    }*/
+    }
 
     public void StageSelButtonClick(Button button)
     {
